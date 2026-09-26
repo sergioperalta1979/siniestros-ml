@@ -1,4 +1,10 @@
-from app.datos import consultar
+from app.datos import consultar, leer_hechos
+
+
+df = leer_hechos()
+print(df.shape)
+print(df.isna().sum())
+print(df["tipo_de_via_siniestro"].value_counts(dropna=False).head())
 
 # 1. Cuántos siniestros hay de cada gravedad, de mayor a menor
 print(consultar("""

@@ -40,3 +40,8 @@ FROM hechos
 
 def leer_hechos(ruta_db=RUTA_DB):
     return consultar(SQL_HECHOS, ruta_db)
+
+if __name__ == "__main__":
+    print("Descargando...")
+    print(descargar())
+    print("Filas cargadas en SQLite:", cargar_a_sqlite())
